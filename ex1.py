@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 def solution(arr):
     k = arr[0]
     answer = [k]
@@ -19,3 +20,10 @@ def solution(arr):
             
     return answer
     """
+=======
+def solution(a, b):
+    answer = 0
+    for i in range(min(a,b),max(a,b)+1):
+        answer += i
+    return answer
+>>>>>>> 2a0424d9e7dab98c8419b80d756ff2ade09d283d

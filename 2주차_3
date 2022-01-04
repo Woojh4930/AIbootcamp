@@ -1,0 +1,21 @@
+def solution(s):
+    answer = ''
+    a = list(s)
+    k = 0
+    for i in range(len(a)):
+        while True:
+            if a[i] == " ":
+                k = 0
+                break
+            if k%2 == 0:
+                a[i] = a[i].upper()
+                k+=1
+                break
+            else:
+                a[i] = a[i].lower()
+                k+=1
+                break
+            
+        answer += a[i]
+    
+    return answer

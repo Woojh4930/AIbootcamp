@@ -1,0 +1,8 @@
+def solution(s):
+    a = list(s)
+    a.sort()
+    a.reverse()
+    answer = ''
+    for i in a:
+        answer += i
+    return answer

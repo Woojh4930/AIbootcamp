@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 def solution(n, m):
     answer = []
     
@@ -9,4 +10,8 @@ def solution(n, m):
             break
         a,b = b,a%b
     
+=======
+def solution(x, n):
+    answer = [x*i for i in range(1,n+1)]
+>>>>>>> 2a0424d9e7dab98c8419b80d756ff2ade09d283d
     return answer

@@ -1,0 +1,10 @@
+def solution(s):
+    answer = True
+    try :
+        int(s)
+    except:
+        answer = False
+    
+    if len(s) not in (4,6):
+        answer = False
+    return answer

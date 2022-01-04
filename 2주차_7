@@ -1,0 +1,14 @@
+def solution(arr):
+    answer = 0
+    if len(arr) > 1:
+        for i in range(1,len(arr)):
+            a,b = arr[0],arr[i]
+            while True:
+                print(a,b)
+                if a%b == 0:
+                    arr[0] = (arr[0]*arr[i])//b
+                    break
+                a,b = b,a%b
+    
+    answer = arr[0]
+    return answer
