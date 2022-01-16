@@ -1,0 +1,19 @@
+import math
+
+def solution(progresses, speeds):
+    
+    for i in range(len(speeds)):
+        progresses[i] = math.ceil((100-progresses[i])/speeds[i])
+    
+    k = progresses[0]
+    cnt = 1
+    answer = []
+    for i in range(1,len(speeds)): 
+        if progresses[i]<=k:
+            cnt+=1
+        else:
+            answer.append(cnt)
+            k = progresses[i]
+            cnt=1
+    answer.append(cnt)   
+    return answer
