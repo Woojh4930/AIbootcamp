@@ -1,0 +1,28 @@
+from itertools import permutations as pt
+
+def solution(numbers):
+    answer = 0
+    
+    prime = [False,False]+[True]*(10**len(str(numbers))-2)
+    for i in range(10**len(str(numbers))):
+        if prime[i]:
+            for j in range(i*2,10**len(str(numbers)),i):
+                prime[j] = False
+    arr = []
+    def all(num):
+        if num == len(str(numbers))+1:
+            return arr
+        
+        for i in pt(str(numbers),num):
+            k = ""
+            for j in i:
+                k+=j
+            arr.append(int(k))
+        all(num+1)
+        
+    all(1)
+    
+    for i in list(set(arr)):
+        if prime[i]:
+            answer+=1
+    return answer
